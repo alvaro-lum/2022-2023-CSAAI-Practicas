@@ -4,25 +4,22 @@
 * {
     box-sizing: border-box;
   }
-  @font-face
-  {
-     font-family: "LUMOS";
-     src: url("LUMOS.ttf");
-  }
+
   @font-face {
     font-family: "Phineas y Ferb.ttf";
     src: url("Phineas y Ferb.ttf");
   }
     body {
-      background-image: url(https://i.pinimg.com/originals/ad/fa/cb/adfacbe75d91afb148ce90c6037d8584.png);
+      background-image: url(cielo.jpg);
       background-size: 100%;
+      text-align: center;
     }
     h1 {
       font-family: "Phineas y Ferb.ttf";
       font-size: 50px;
       text-align: center;
       text-shadow:4px 4px grey;
-      border: #AA7700 10px double;
+
       border-bottom: none;
       padding: 10px;
       margin: 50px;
@@ -31,29 +28,29 @@
       .cuerpo {
         display: inline-flex;
         padding: 0px;
-        margin: 50px;
-        border: #AA7700 10px double;
+        margin: 10px;
+        border: #7a00aa 10px double;
         margin-top: 0px;
         margin-bottom: 0px;
       }
       .apartados{
         font-family: "Phineas y Ferb.ttf";
         font-size: 35px;
-        border-bottom: #AA7700 10px double;
+        border-bottom: #7a00aa 10px double;
         padding: 10px;
         display: inline-flex;
-        width: 95%;
-        height: 30px;
+        width: 100%;
+        height: 20px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
         justify-content: center;
-        align-items: center;
+        align-items: top;
         text-shadow:2px 2px grey;
         }
       .parrafos {
         font-family: "Phineas y Ferb.ttf";
-        font-size: 25px;
+        font-size: 20px;
         display: flex;
         align-items: center;
         margin: 10px;
@@ -63,8 +60,8 @@
       }
 
       aside{
-        width: 30%;
-        border: #AA7700  10px double;
+        width: 55%;
+        border: #7a00aa  10px double;
         margin: 0px;
         padding:15px;
         text-align: justify;
@@ -75,15 +72,20 @@
       }
 
       .imagen{
-        float:inherit;
+        float:left;
         position:relative;
         padding: 0px;
         margin:0px;
       
-        right: 23px;
+        right: 0px;
+        width: 300px;
+      }
+      .gif{
+        position: absolute;
+        width: 200%;
       }
       .frases{
-        font-family: "LUMOS";
+        font-family: "Phineas y Ferb.ttf";
         font-size: 23px;
         display: flex;
         align-items: center;
@@ -94,17 +96,18 @@
        }
 
       main{
-        border: #AA7700  10px double;
+        border: #7a00aa  10px double;
         margin-top: 0px;
         padding: 10px;
         background-image: url("marcaagua.png");
         background-position: center;
         background-repeat: repeat-x;
         flex-wrap: wrap;
+        position: relative;
       }
 
       address{
-        font-family: "LUMOS";
+        font-family: "Phineas y Ferb.ttf";
         font-size: 20px;
         text-align: center;
         -webkit-column-count: 3; /* Chrome, Safari, Opera */
@@ -117,10 +120,20 @@
         align-self: flex-end;
         margin:10px;
         padding: 0px;
-        text-align: center;
+        text-align: right;
         margin-right: 50px;
-        opacity: 100%;
-       
+        opacity: 1000%;
+        width: 399px;
+        position: center;
+       }
+       .foto{
+        float:right;
+        position:absolute;
+        padding: 0px;
+        margin:0px;
+      
+        right: 0px;
+        width: 250px
        }
 
     
@@ -158,8 +171,8 @@ clear: both;
 /* estilos para imágenes https://www.w3schools.com/css/css3_images.asp */
 /* posicionamiento de imágenes https://www.w3schools.com/css/css_positioning.asp */
 
-img {
-    width: 100%;
+imgagen{
+    width: 50%;
     height: auto;
 }
 
