@@ -10,7 +10,7 @@
     src: url("Phineas y Ferb.ttf");
   }
     body {
-      background-image: url(cielo.jpg);
+      background-image: url(background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: 100%;
@@ -32,6 +32,7 @@
         padding: 0px;
         margin: 10px;
         border: #7a00aa 10px groove;
+        border-radius: 20px;
         margin-top: 0px;
         margin-bottom: 0px;
       }
@@ -39,6 +40,7 @@
         font-family: "Phineas y Ferb.ttf";
         font-size: 35px;
         border-bottom: #7a00aa 10px groove;
+        border-radius: 20px;
         padding: 10px;
         display: inline-flex;
         width: 100%;
@@ -64,6 +66,7 @@
       aside{
         width: 55%;
         border: #7a00aa  10px groove;
+        border-radius: 20px;
         margin: 0px;
         padding:15px;
         text-align: justify;
@@ -108,6 +111,7 @@
 
       main{
         border: #7a00aa  10px groove;
+        border-radius: 20px;
         margin-top: 0px;
         padding: 10px;
 
