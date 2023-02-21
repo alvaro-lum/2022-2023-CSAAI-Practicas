@@ -1,9 +1,7 @@
 /* https://www.w3schools.com/howto/howto_css_two_columns.asp */
 /* https://developer.mozilla.org/es/docs/Web/CSS/box-sizing */
 /* Así definimos el comportamiento de caja para todos los elementos */
-* {
-    box-sizing: border-box;
-  }
+
 
   @font-face {
     font-family: "Phineas y Ferb.ttf";
@@ -13,12 +11,11 @@
       background-image: url(background.jpg);
       background-repeat: no-repeat;
       background-attachment: fixed;
-      background-size: 100%;
-      text-align: center;
+      background-size: 400%;
+      justify-content: center;
     }
     h1 {
       font-family: "Phineas y Ferb.ttf";
-      font-size: 50px;
       text-align: center;
       text-shadow:4px 4px grey;
 
@@ -38,18 +35,16 @@
       }
       .apartados{
         font-family: "Phineas y Ferb.ttf";
-        font-size: 35px;
+        font-size: 30px;
         border-bottom: #7a00aa 10px groove;
-        border-radius: 20px;
         padding: 10px;
-        display: inline-flex;
-        width: 100%;
+        text-align: center;
+        display: inline-block;
+        width: 95%;
         height: 20px;
         margin-left: auto;
         margin-right: auto;
         margin-top: 10px;
-        justify-content: center;
-        align-items: top;
         text-shadow:2px 2px grey;
         }
       .parrafos {
@@ -59,7 +54,6 @@
         align-items: center;
         margin: 10px;
         padding: 0px;
-        text-align: justify;
 
       }
 
@@ -72,15 +66,10 @@
         text-align: justify;
       }
 
-      .box {
-        box-sizing: border-box;
-      }
-
       .imagen{
-        float:left;
-        position:relative;
+        text-align: center;
         padding: 0px;
-        margin:0px;
+        margin-left:0px;
       
         right: 0px;
         width: 300px;
@@ -114,8 +103,6 @@
         border-radius: 20px;
         margin-top: 0px;
         padding: 10px;
-
-        flex-wrap: wrap;
         position: relative;
 
         
@@ -125,8 +112,6 @@
         font-family: "Phineas y Ferb.ttf";
         font-size: 20px;
         text-align: center;
-        -webkit-column-count: 3; /* Chrome, Safari, Opera */
-        -moz-column-count: 3; /* Firefox */
         column-count: 3; /* Para visualizar las tres columnas */
         margin-top: 20px;
       }
