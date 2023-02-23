@@ -36,11 +36,11 @@
       .apartados{
         font-family: "Phineas y Ferb.ttf";
         font-size: 30px;
-        border-bottom: #7a00aa 10px groove;
+        border-bottom: #7a00aa 10px solid;
         padding: 10px;
         text-align: center;
         display: inline-block;
-        width: 95%;
+        width: 98%;
         height: 20px;
         margin-left: auto;
         margin-right: auto;
@@ -58,7 +58,7 @@
       }
 
       aside{
-        width: 55%;
+        width: 50%;
         border: #7a00aa  10px groove;
         border-radius: 20px;
         margin: 0px;
@@ -74,29 +74,10 @@
         right: 0px;
         width: 300px;
       }
-      .imagen2{
-        float:right;
-        position:relative;
-        padding: 0px;
-        margin:0px;
-      
-        right: 0px;
-        width: 300px;
-      }
       .gif{
         position: relative;
         width: 300%;
       }
-      .frases{
-        font-family: "Phineas y Ferb.ttf";
-        font-size: 23px;
-        display: flex;
-        align-items: center;
-        padding: 0px;
-        text-align: justify;
-        font-style: italic;
-        list-style-image: url("mano.svg");
-       }
 
       main{
         border: #7a00aa  10px groove;
@@ -120,20 +101,11 @@
         align-self: flex-end;
         margin:30px;
         padding: 0px;
-        text-align: right;
+        text-align: center;
         margin-right: 50px;
         opacity: 1000%;
         width: 399px;
         position: center;
-       }
-       .foto{
-        float:right;
-        position:absolute;
-        padding: 0px;
-        margin:0px;
-      
-        right: 0px;
-        width: 250px
        }
 
     
@@ -190,8 +162,12 @@ imagen{
       width: 100%;
     }
 
-    .iresponsive {
+    .irresponsive {
         width: 100%;
+    }
+    .imagen {
+      max-width: 80%;
+      height: auto;
     }
 }
 
