@@ -102,10 +102,22 @@ function getRandomInt(max) {
     return Math.floor(Math.random()* max);
 }
 
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 4; i++) {
     let rnum = getRandomInt(9);
     secretKey.push(rnum);
 }
+
+//-- Generamos números secretos y los almacenamos en un array
+for (let i = 0; i < secretKey; i++) {
+    let rnum = getRandomInt(9);
+    secretKey.push(rnum.toString());
+}
+
+//-- Mostramos el contenido del array de números secretos en la consola
+for (let j = 0; j < secretKey.length; j++) {
+    console.log( j + ' Secret Key ' + secretKey[j]);
+}
+
 
 const line0buttons = document.querySelectorAll('.pad .celda');
 
@@ -114,38 +126,78 @@ line0buttons.forEach((button, index) => {
     button.textContent = '*';
 });
 
-function checkDigit(digit) {
-    // Si el cronómetro no está iniciado, lo iniciamos
-    if (!crono.timer) {
-      crono.start();
+digitos = document.getElementsByClassName("cdigito")
+celdas = document.getElementsByClassName("celda")
+//-- Establecer la misma función de retrollamada
+//-- para todos los botones de tipo dígito
+for (let boton of digitos) {
+
+    //-- Se ejecuta cuando se pulsa un boton
+    //-- que es un dígito
+    boton.onclick = (ev) => {
+        celdas.innerHTML += ev.target.value;
+        console.log("DIGITO!!!");
     }
-  
-    // Buscamos el índice del dígito pulsado en la clave secreta
-    const index = secretKey.indexOf(parseInt(digit));
-  
-    if (index !== -1) {
-      // Si el dígito está en la clave secreta, lo mostramos y cambiamos su color
-      const button = line0buttons[index];
+}
+
+const digito = document.getElementsByClassName("cdigito")
+let currentKeyIndex = 0;
+
+for (let boton of digito) {
+  boton.onclick = (ev) => {
+    const digit = parseInt(ev.target.value);
+    const currentKeyDigit = secretKey[currentKeyIndex];
+
+    if (digit === currentKeyDigit) {
+      const button = line0buttons[currentKeyIndex];
       button.textContent = digit;
+      button.classList.remove('incorrect');
       button.classList.add('correct');
-      secretKey[index] = null;
-  
-      // Comprobamos si hemos acertado todos los dígitos
-      const allDigitsCorrect = secretKey.every(d => d === null);
-  
-      if (allDigitsCorrect) {
-        // Si hemos acertado todos los dígitos, paramos el cronómetro
-        crono.stop();
-      }
+      currentKeyIndex++;
+
+    } else {
+      currentKeyIndex = currentKeyIndex; 
+      const button = line0buttons[currentKeyIndex];
+      button.textContent = digit;  
+      button.classList.add('incorrect');
+  }
+  if (!crono.timer) {
+    crono.start();
+  }
+   
+
+  if (currentKeyIndex === secretKey.length) {
+      crono.stop();
     }
+      
   }
 
-  line0buttons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-      checkDigit(event.target.value);
-    });
+}
+
+
+line0buttons.forEach((button) => {
+  button.addEventListener('click', (event) => {
+    checkDigit(event.target.value);
   });
-  
+});
+
+const lineButtons = document.querySelectorAll('.line1, .line2, .line3, .line4');
+
+lineButtons.forEach((button) => {
+  button.addEventListener('click', () =>  {
+      const digit = parseInt(button.value);
+      const displayDigits = document.querySelectorAll('.line0, cdigito');
+      displayDigits.forEach((displayDigits) => {
+          if (displayDigits.textContent === '*'){
+              const displayValue = parseInt(displayDigits.value);
+              if (digit === displayValue) {
+                  displayDigits.textContent = digit;
+              }
+          }
+      });
+  });
+});
+
 
 
 
