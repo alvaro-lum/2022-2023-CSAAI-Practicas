@@ -1,5 +1,5 @@
 @font-face {
-    font-family: "Mario";
+    font-family: "GTA";
     src: url("pricedown\ bl.ttf");
 }
 
@@ -7,12 +7,15 @@ body{
     background-image: url("fondo.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100%;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
     justify-content: center;
     }
 
     h1 {
-        font-family: "Mario";
+        font-family: "GTA";
         font-size: 100px;
         text-align: center;
         padding: 10px;
@@ -25,11 +28,11 @@ body{
 
     .pad {
         text-align: center;
-        border: solid 10px rgba(1,1,1,0.8);
-        padding: 10px;
+        border: ridge 5px rgba(1,1,1,0.8);
+        padding: 60px;
         padding-top: 0px;
-        padding-left: 25px;
-        padding-right: 25px;
+        padding-left: 80px;
+        padding-right: 80px;
         padding-bottom: 60px;
         height: 30px;
         background-color: rgba(0, 0, 0, 0.2);
@@ -39,7 +42,9 @@ body{
     }
 
     .celda {
-        margin: 10px;
+        background-color: #d6d3cd;
+        border: solid 5px black;
+        margin: 15px;
         padding: 10px;
         border: 5px;
         padding-top: 10px;
@@ -49,14 +54,6 @@ body{
         margin-left: 10px;
         margin-right: 10px;
     }
-
-
-    .calc{
-        background:  grey#380303;
-        text-align: center;
-        font-size: 40px;
-
-        }
 
     .pantalla{
         background: white;
@@ -71,23 +68,30 @@ body{
         margin-left: auto;
         margin-right: auto;
         width: 250px;
-        }
+    }
+
+    .calc{
+        background:  rgb(9, 241, 222)#380303;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 60px;
+    
+    }
               
     p{
-        font-family: "Mario";
+        font-family: "GTA";
         text-align: center;
         margin:0px;
         opacity: none;
         font-size: 40px;
         height: 50px;
-        border:silver 5px ridge;
-        border-radius: 5px;
+        border:rgb(129, 7, 7) 5px ridge;
         padding-top: 8px;
         }
 
     .result {
         text-align: center;
-        font-family: "Mario";
+        font-family: "GTA";
         font-size: 45px;
         height: 80px;
         margin: 10px;
@@ -98,12 +102,11 @@ body{
     }
               
     .Calculator{
-        background-color:rgba(1,1,1,0.7);
-        padding: 15px;
+        background-color:rgba(16, 219, 192, 0.7);
+        border:rgb(0, 0, 0) 5px ridge;
+        padding: 60px;
         text-align: center;
         width: auto;
-        border-bottom-left-radius:30px ;
-        border-bottom-right-radius:30px;
         margin-left: auto;
         margin-right: auto;
         width: 300px;
@@ -112,35 +115,53 @@ body{
     .line1{
         padding-left: 23px;
         padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
 
         }
           
     .line2{
         padding-left: 23px;
         padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
         }
           
     .line3{
         padding-left: 23px;
         padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
         }
           
     .line4{
         padding-left: 23px;
         padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
         }
 
     .cdigito {
         text-align: center;
-        font-family: "Mario";
-        font-size: 45px;
-        height: 60px;
-        width: 40px;
+        background-color:gray;
+        font-family: "GTA";
+        font-size: 35px;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
           
     button{
-        font-family: "Mario";
-        font-size: 45px;
+        background-color: #74726f;
+        border:solid black 2px;
+        font-family: "GTA";
+        font-size: 40px;
         }
           
     button:hover {
@@ -153,4 +174,35 @@ body{
     }
     .incorrect {
         color: red;
+    }
+    #reset {
+        background-color: beige;
+        text-align: right;
+        font-size: 30px;
+    }
+
+    #stop {
+        background-color: beige;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    #start {
+        background-color: beige;
+        text-align: center;
+        font-size: 30px;
+    }
+    #start:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+    }
+
+    #stop:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+    }
+
+    #reset:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
     }

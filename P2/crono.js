@@ -169,11 +169,10 @@ for (let boton of digito) {
   if (currentKeyIndex === secretKey.length) {
       crono.stop();
     }
-      
+    
   }
 
 }
-
 
 line0buttons.forEach((button) => {
   button.addEventListener('click', (event) => {
