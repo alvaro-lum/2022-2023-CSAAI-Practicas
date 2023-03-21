@@ -1,0 +1,208 @@
+@font-face {
+    font-family: "GTA";
+    src: url("pricedown\ bl.ttf");
+}
+
+body{
+    background-image: url("fondo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    }
+
+    h1 {
+        font-family: "GTA";
+        font-size: 100px;
+        text-align: center;
+        padding: 10px;
+        margin: 50px;
+        margin-bottom: 0px;
+        color:#A98727;
+        text-shadow:#CEAB46 2px 0;
+        -webkit-text-stroke: 1px #533E03;
+        }
+
+    .pad {
+        text-align: center;
+        border: ridge 5px rgba(1,1,1,0.8);
+        padding: 60px;
+        padding-top: 0px;
+        padding-left: 80px;
+        padding-right: 80px;
+        padding-bottom: 60px;
+        height: 30px;
+        background-color: rgba(0, 0, 0, 0.2);
+        margin-left: auto;
+        margin-right: auto;
+        width: 260px;
+    }
+
+    .celda {
+        background-color: #d6d3cd;
+        border: solid 5px black;
+        margin: 15px;
+        padding: 10px;
+        border: 5px;
+        padding-top: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .pantalla{
+        background: white;
+        border-bottom:double ;
+        padding: 10px;
+        padding-top: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+        padding-bottom: 38px;
+        height: 30px;
+        background-color: rgba(255,255,255,0.2);
+        margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+    }
+
+    .calc{
+        background:  rgb(9, 241, 222)#380303;
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 60px;
+    
+    }
+              
+    p{
+        font-family: "GTA";
+        text-align: center;
+        margin:0px;
+        opacity: none;
+        font-size: 40px;
+        height: 50px;
+        border:rgb(129, 7, 7) 5px ridge;
+        padding-top: 8px;
+        }
+
+    .result {
+        text-align: center;
+        font-family: "GTA";
+        font-size: 45px;
+        height: 80px;
+        margin: 10px;
+        opacity: none;
+        border-radius: 5px;
+        padding-top: 8px;
+
+    }
+              
+    .Calculator{
+        background-color:rgba(16, 219, 192, 0.7);
+        border:rgb(0, 0, 0) 5px ridge;
+        padding: 60px;
+        text-align: center;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        width: 300px;
+        }
+
+    .line1{
+        padding-left: 23px;
+        padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+
+        }
+          
+    .line2{
+        padding-left: 23px;
+        padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+          
+    .line3{
+        padding-left: 23px;
+        padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        }
+          
+    .line4{
+        padding-left: 23px;
+        padding-right: 20px;
+        margin: 5px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 20px;
+        }
+
+    .cdigito {
+        text-align: center;
+        background-color:gray;
+        font-family: "GTA";
+        font-size: 35px;
+        height: 50px;
+        width: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+          
+    button{
+        background-color: #74726f;
+        border:solid black 2px;
+        font-family: "GTA";
+        font-size: 40px;
+        }
+          
+    button:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+        }
+
+    .correct {
+        color: green;
+    }
+    .incorrect {
+        color: red;
+    }
+    #reset {
+        background-color: beige;
+        text-align: right;
+        font-size: 30px;
+    }
+
+    #stop {
+        background-color: beige;
+        text-align: left;
+        font-size: 30px;
+    }
+
+    #start {
+        background-color: beige;
+        text-align: center;
+        font-size: 30px;
+    }
+    #start:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+    }
+
+    #stop:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+    }
+
+    #reset:hover {
+        background-color:rgb(150, 243, 88) ;
+        color: rgb(0, 0, 0);
+    }
