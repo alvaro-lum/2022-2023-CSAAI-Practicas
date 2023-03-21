@@ -95,7 +95,6 @@ gui.reset.onclick = () => {
     console.log("Reset!");
     crono.reset();
 }
-
 const secretKey = [];
 
 function getRandomInt(max) {
@@ -105,12 +104,6 @@ function getRandomInt(max) {
 for (let i = 0; i < 4; i++) {
     let rnum = getRandomInt(9);
     secretKey.push(rnum);
-}
-
-//-- Generamos números secretos y los almacenamos en un array
-for (let i = 0; i < secretKey; i++) {
-    let rnum = getRandomInt(9);
-    secretKey.push(rnum.toString());
 }
 
 //-- Mostramos el contenido del array de números secretos en la consola
@@ -139,9 +132,10 @@ for (let boton of digitos) {
         console.log("DIGITO!!!");
     }
 }
-
 const digito = document.getElementsByClassName("cdigito")
+const pad = document.getElementsByClassName("pad")
 let currentKeyIndex = 0;
+
 
 for (let boton of digito) {
   boton.onclick = (ev) => {
@@ -168,11 +162,14 @@ for (let boton of digito) {
 
   if (currentKeyIndex === secretKey.length) {
       crono.stop();
+    } else if (reset.onclick)() => {
+            pad.innerHTML = secretKey;
+          }
     }
-    
+
+
   }
 
-}
 
 line0buttons.forEach((button) => {
   button.addEventListener('click', (event) => {
@@ -196,7 +193,6 @@ lineButtons.forEach((button) => {
       });
   });
 });
-
 
 
 
