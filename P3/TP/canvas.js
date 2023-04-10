@@ -253,9 +253,13 @@ const sound = document.getElementById("mySound");
 const context = new AudioContext();
 const src = context.createMediaElementSource(sound);
 const gainNode = context.createGain();
-gainNode.gain.value = 0.3;
-src.connect(gainNode);
-gainNode.connect(context.destination);
-sound.play();
+window.addEventListener("load", () => {
+  // Reproducir el sonido
+  gainNode.gain.value = 0.3;
+  src.connect(gainNode);
+  gainNode.connect(context.destination);
+  sound.play();
+});
+
 lanzar();
 
