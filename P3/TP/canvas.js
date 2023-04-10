@@ -255,9 +255,6 @@ velocidad.addEventListener("input", function() {
   velocity = parseFloat(velocidad.value);
   numVel.textContent = velocity + "m/s";
 });
-
-
-lanzar();
 window.addEventListener("load", () => {
   // Reproducir el sonido
   gainNode.gain.value = 0.3;
@@ -265,3 +262,5 @@ window.addEventListener("load", () => {
   gainNode.connect(context.destination);
   sound.play();
 });
+
+lanzar();
