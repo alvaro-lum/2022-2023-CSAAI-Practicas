@@ -1,3 +1,5 @@
+
+
 //CRONOMETRO
 //-- Clase cronómetro
 class Crono {
@@ -204,6 +206,10 @@ const btnIniciar = document.getElementById("resetear");
 const velocidad = document.getElementById("velocidad");
 const numVel = document.getElementById("velocity");
 const message = document.getElementById("message");
+const sound = document.getElementById("mySound");
+const context = new AudioContext();
+const src = context.createMediaElementSource(sound);
+const gainNode = context.createGain();
 const crono = new Crono(disp);
 
 
@@ -249,10 +255,9 @@ velocidad.addEventListener("input", function() {
   velocity = parseFloat(velocidad.value);
   numVel.textContent = velocity + "m/s";
 });
-const sound = document.getElementById("mySound");
-const context = new AudioContext();
-const src = context.createMediaElementSource(sound);
-const gainNode = context.createGain();
+
+
+lanzar();
 window.addEventListener("load", () => {
   // Reproducir el sonido
   gainNode.gain.value = 0.3;
@@ -260,6 +265,3 @@ window.addEventListener("load", () => {
   gainNode.connect(context.destination);
   sound.play();
 });
-
-lanzar();
-
