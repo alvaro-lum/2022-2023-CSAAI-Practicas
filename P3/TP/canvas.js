@@ -262,5 +262,14 @@ window.addEventListener("load", () => {
   gainNode.connect(context.destination);
   sound.play();
 });
+function draw() {
+  // Código para dibujar en el canvas
+  
+  // Reproducir el sonido
+  sound.play();
+  
+  // Actualizar el canvas
+  requestAnimationFrame(draw);
+}
 
 lanzar();
