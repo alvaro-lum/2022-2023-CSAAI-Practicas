@@ -257,7 +257,7 @@ velocidad.addEventListener("input", function() {
 });
 window.addEventListener("load", () => {
   // Reproducir el sonido
-  gainNode.gain.value = 0.3;
+  gainNode.gain.value = 0.2;
   src.connect(gainNode);
   gainNode.connect(context.destination);
   sound.play();
