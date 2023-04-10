@@ -249,5 +249,13 @@ velocidad.addEventListener("input", function() {
   velocity = parseFloat(velocidad.value);
   numVel.textContent = velocity + "m/s";
 });
+const sound = document.getElementById("mySound");
+const context = new AudioContext();
+const src = context.createMediaElementSource(sound);
+const gainNode = context.createGain();
+gainNode.gain.value = 0.3;
+src.connect(gainNode);
+gainNode.connect(context.destination);
+sound.play();
 lanzar();
 
