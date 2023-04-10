@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="mario1.png" type="image/x-icon">
+    <script src="canvas.js" defer></script>
+    <title>PARABOLA</title>
+
+    <link rel="stylesheet" href="parabola.css">
+</head>
+<body>
+    <h1><span id="M">M</span><span id="I">I</span>
+    <span id="E">E</span><span id="J">J</span><span id="E">E</span><span id="R">R</span><span id="C">C</span><span id="I">I</span><span id="C">C</span><span id="I">I</span><span id="O">O</span><span id="point">.</span></h1>
+    <br>
+    <canvas id="canvas" width="680" height = "400"></canvas>
+    <br><br>
+    <b id="timer">TIMER</b>
+
+    <div class="pantalla">
+    <p id="display">0:0:0</p>
+    </div>
+    <br>
+    <b>Ángulo de disparo:</b><br>
+    <input type="range" id="angulo" min="45" max="90" value="45.0" step="1.0"><br>
+    <p id="angle" value="45.0">45º</p>
+    <br>
+    <b>Velocidad de disparo:</b><br>
+    <input type="range" id="velocidad" min="50" max="100" value="1.0" step="1.0"><br>
+    <p id="velocity" value="0.1">50m/s </p>
+    <br>
+    <button id="disparo" >Disparar</button>
+    <button id="resetear">Iniciar</button>
+    <br><br>
+    Y el resultado es: <span id="message" value="x">x</span>
+
+</body>
+</html>
