@@ -7,8 +7,8 @@ const selectors = {
     comenzar: document.querySelector('button'),
     reset: document.getElementById('reset'),
     x2: document.getElementById('x2'),
-    x3: document.getElementById('x3'),
     x3: document.getElementById('x4'),
+    x3: document.getElementById('x6'),
     win: document.querySelector('.win')
 }
 
