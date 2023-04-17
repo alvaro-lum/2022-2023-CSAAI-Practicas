@@ -5,6 +5,10 @@ const selectors = {
     movimientos: document.querySelector('.movimientos'),
     timer: document.querySelector('.timer'),
     comenzar: document.querySelector('button'),
+    reset: document.getElementById('reset'),
+    x2: document.getElementById('x2'),
+    x3: document.getElementById('x3'),
+    x3: document.getElementById('x4'),
     win: document.querySelector('.win')
 }
 
@@ -228,23 +232,4 @@ const flipBackCards = () => {
             clearInterval(state.loop)
         }, 1000)
     }
-    const sound = document.getElementById("mySound");
-    const context = new AudioContext();
-    const src = context.createMediaElementSource(sound);
-    const gainNode = context.createGain();
-    window.addEventListener("load", () => {
-        // Reproducir el sonido
-        gainNode.gain.value = 0.2;
-        src.connect(gainNode);
-        gainNode.connect(context.destination);
-        sound.play();
-      });
-      function draw() {
-        // Código para dibujar en el canvas
-        
-        // Reproducir el sonido
-        sound.play();
-        
-        // Actualizar el canvas
-        requestAnimationFrame(draw);
-      }
+ 
