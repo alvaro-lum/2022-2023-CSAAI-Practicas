@@ -21,16 +21,16 @@ const state = {
 }
 
 const generateGame = () => {
-    const dimensions = selectors.tablero.getAttribute('grid-dimension')
+    var dimensions = selectors.tablero.getAttribute('grid-dimension')
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
     if (dimensions % 2 !== 0) {
         throw new Error("Las dimensiones del tablero deben ser un número par.")
-    }
+    } 
 
     //-- Creamos un array con los emojis que vamos a utilizar en nuestro juego
-    const emojis = ['🦇', '🐈‍⬛', '🐇', '🐧', '🦉', '🌃', '🃏', '⚖️', '❓', '🤡']
+    const emojis = ['🦇', '🐈‍⬛', '🐇', '🐧', '🦉', '🌃', '🃏', '⚖️', '❓', '🤡', '💵', '🥷🏽', '🧸', '💎', '🔪', '🌹', '🥀', '🪳', '🦈', '🎭']
     
     //-- Elegimos un subconjunto de emojis al azar, así cada vez que comienza el juego
     // es diferente.
@@ -232,4 +232,26 @@ const flipBackCards = () => {
             clearInterval(state.loop)
         }, 1000)
     }
- 
+    reset.onclick = () => {
+        location.reload();
+        console.log("Reset!");
+        
+      }
+      var dimensions = selectors.tablero.getAttribute('grid-dimension')
+      x2.onclick = () => {
+        dimensions = 2;
+        console.log("x2");
+        generateGame()
+      }
+
+      x4.onclick = () => {
+        dimensions = 4;
+        console.log("x4");
+        generateGame()
+      }
+
+      x6.onclick = () => {
+        dimensions = 6;
+        console.log("x6");
+        generateGame()
+      }
