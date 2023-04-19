@@ -7,8 +7,8 @@ const selectors = {
     comenzar: document.querySelector('button'),
     reset: document.getElementById('reset'),
     x2: document.getElementById('x2'),
-    x3: document.getElementById('x4'),
-    x3: document.getElementById('x6'),
+    x4: document.getElementById('x4'),
+    x6: document.getElementById('x6'),
     win: document.querySelector('.win')
 }
 
@@ -21,7 +21,7 @@ const state = {
 }
 
 const generateGame = () => {
-    var dimensions = selectors.tablero.getAttribute('grid-dimension')
+    const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -194,7 +194,7 @@ const flipCard = card => {
                 <span class="win-text">
                     ¡Has ganado!<br />
                     con <span class="highlight">${state.totalFlips}</span> movimientos<br />
-                    en un tiempo de <span class="highlight">${state.totalTime}</span> segundos
+                    en un tiempo de <span class="highlight">${state.totalTime}</span> segundos 🦇
                 </span>
             `
             // Paramos el loop porque el juego ha terminado
@@ -232,26 +232,26 @@ const flipBackCards = () => {
             clearInterval(state.loop)
         }, 1000)
     }
-    reset.onclick = () => {
+    selectors.reset.onclick = () => {
         location.reload();
         console.log("Reset!");
         
       }
-      var dimensions = selectors.tablero.getAttribute('grid-dimension')
-      x2.onclick = () => {
+      const dimensions = selectors.tablero.getAttribute('grid-dimension')
+      selectors.x2.onclick = () => {
         dimensions = 2;
         console.log("x2");
-        generateGame()
-      }
 
-      x4.onclick = () => {
+    }
+    
+    selectors.x4.onclick = () => {
         dimensions = 4;
         console.log("x4");
-        generateGame()
-      }
 
-      x6.onclick = () => {
+    }
+    
+    selectors.x6.onclick = () => {
         dimensions = 6;
         console.log("x6");
-        generateGame()
-      }
+
+    }

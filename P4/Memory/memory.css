@@ -152,3 +152,14 @@ button {
 .highlight {
     color: #6f00fc;
 }
+
+@media screen and (max-width: 600px) {
+    .responsive {
+        width: auto;
+        height: auto;
+    }
+  }
+  
+  .responsive {
+    position: relative;
+  }
