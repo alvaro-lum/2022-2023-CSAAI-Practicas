@@ -23,6 +23,7 @@ const state = {
 const generateGame = () => {
     const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
+
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
     if (dimensions % 2 !== 0) {
@@ -237,7 +238,6 @@ const flipBackCards = () => {
         console.log("Reset!");
         
       }
-      const dimensions = selectors.tablero.getAttribute('grid-dimension')
       selectors.x2.onclick = () => {
         dimensions = 2;
         console.log("x2");
