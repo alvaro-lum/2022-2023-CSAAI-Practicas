@@ -76,12 +76,10 @@ button {
 }
 
 .tablero {
-    padding: 15px;
+    padding: 20px;
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 20px;
-    background-color: white;
-    border: solid 5px black;
     text-align: center;
 }
 
@@ -107,6 +105,7 @@ button {
     width: 100%;
     height: 100%;
     background: #065a1b;
+    background-image: url("joker.png");
     border: solid 5px black;
     transition: transform .6s cubic-bezier(0.4, 0.0, 0.2, 1);
     backface-visibility: hidden;

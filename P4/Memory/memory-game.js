@@ -19,10 +19,8 @@ const state = {
     totalTime: 0,
     loop: null
 }
-
 const generateGame = () => {
-    const dimensions = selectors.tablero.getAttribute('grid-dimension')
-
+    var dimensions = selectors.tablero.getAttribute('grid-dimension')
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -43,6 +41,7 @@ const generateGame = () => {
     // están desordenadas.
     const items = shuffle([...picks, ...picks])
     
+
     //-- Vamos a utilizar una función de mapeo para generar 
     //  todas las cartas en función de las dimensiones
     const cards = `
@@ -200,6 +199,7 @@ const flipCard = card => {
             `
             // Paramos el loop porque el juego ha terminado
             clearInterval(state.loop)
+        
         }, 1000)
     }
 }
@@ -238,20 +238,47 @@ const flipBackCards = () => {
         console.log("Reset!");
         
       }
-      selectors.x2.onclick = () => {
-        dimensions = 2;
+      var dimensions = selectors.tablero.getAttribute('grid-dimension');
+      var enteroAleatorio = Math.floor(Math.random() * 10) + 1;
+    selectors.x2.onclick = () => {
+        dimensions.innerText = "2";
+        dimensions.innerHTML = "2";
         console.log("x2");
+        generateGame();
 
     }
     
     selectors.x4.onclick = () => {
-        dimensions = 4;
+        dimensions.innerText = "4";
+        dimensions.innerHTML = "4";
         console.log("x4");
+        generateGame();
 
     }
     
     selectors.x6.onclick = () => {
-        dimensions = 6;
+        dimensions.innerText = "6";
+        dimensions.innerHTML = "6";
         console.log("x6");
+        generateGame();
 
     }
+    const sound = document.getElementById("mySound");
+    const context = new AudioContext();
+    const src = context.createMediaElementSource(sound);
+    const gainNode = context.createGain();
+    window.addEventListener("load", () => {
+        // Reproducir el sonido
+        gainNode.gain.value = 0.2;
+        src.connect(gainNode);
+        gainNode.connect(context.destination);
+        sound.play();
+      });
+      function draw() {
+        // Código para dibujar en el canvas
+        
+        // Reproducir el sonido
+        sound.play();
+        
+        // Actualizar el canvas
+      }
