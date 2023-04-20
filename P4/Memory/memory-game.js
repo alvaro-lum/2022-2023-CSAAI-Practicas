@@ -272,7 +272,5 @@ const flipBackCards = () => {
         gainNode.connect(context.destination);
         sound.play();
       });
-
-        sound.play();
         
  
