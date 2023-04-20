@@ -244,7 +244,6 @@ const flipBackCards = () => {
         dimensions.innerText = "2";
         dimensions.innerHTML = "2";
         console.log("x2");
-        generateGame();
 
     }
     
@@ -252,7 +251,7 @@ const flipBackCards = () => {
         dimensions.innerText = "4";
         dimensions.innerHTML = "4";
         console.log("x4");
-        generateGame();
+ 
 
     }
     
@@ -260,7 +259,6 @@ const flipBackCards = () => {
         dimensions.innerText = "6";
         dimensions.innerHTML = "6";
         console.log("x6");
-        generateGame();
 
     }
     const sound = document.getElementById("mySound");
@@ -274,11 +272,7 @@ const flipBackCards = () => {
         gainNode.connect(context.destination);
         sound.play();
       });
-      function draw() {
-        // Código para dibujar en el canvas
-        
-        // Reproducir el sonido
+
         sound.play();
         
-        // Actualizar el canvas
-      }
+ 
