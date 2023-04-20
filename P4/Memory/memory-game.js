@@ -20,7 +20,7 @@ const state = {
     loop: null
 }
 const generateGame = () => {
-    var dimensions = selectors.tablero.getAttribute('grid-dimension')
+    const dimensions = selectors.tablero.getAttribute('grid-dimension')
 
     //-- Nos aseguramos de que el número de dimensiones es par
     // y si es impar lanzamos un error
@@ -239,26 +239,28 @@ const flipBackCards = () => {
         
       }
       var dimensions = selectors.tablero.getAttribute('grid-dimension');
-      var enteroAleatorio = Math.floor(Math.random() * 10) + 1;
+      
     selectors.x2.onclick = () => {
-        dimensions.innerText = "2";
-        dimensions.innerHTML = "2";
+        dimensions.textContent = '4';
+        dimensions.value = '2';
         console.log("x2");
+        location.reload();
 
     }
     
     selectors.x4.onclick = () => {
-        dimensions.innerText = "4";
-        dimensions.innerHTML = "4";
+        dimensions.textContent = '4';
+        dimensions.value = '2';
         console.log("x4");
+        location.reload();
  
-
     }
     
     selectors.x6.onclick = () => {
-        dimensions.innerText = "6";
-        dimensions.innerHTML = "6";
+        dimensions.textContent = '4';
+        dimensions.value = '2';
         console.log("x6");
+        location.reload();
 
     }
     const sound = document.getElementById("mySound");
