@@ -23,8 +23,8 @@ const state = {
   sendingPackage:0,
   netDelay: 1,
   netDelayDefault: 1,
-  netNode: 5,
-  netNodeDefault: 5,
+  netNode: 3,
+  netNodeDefault: 3,
   loop: null
 }
 

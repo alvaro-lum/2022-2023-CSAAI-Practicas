@@ -12,17 +12,20 @@
 <body>
     <p>Imagen en Origen</p>
     <img src="pikachu.jpg" id="imagesrc">
-    <img src="pikachu.jpg" id="imagesrchide">    
+    <img src="pikachu.jpg" id="imagesrchide"> 
+    <br>   
     <img src="cloud.png" id="cloud">
     <button id="bsend">Enviar</button>    
     <p>Imagen en Destino</p>
     <canvas id="canvas"></canvas>
     <br>
-    <input type="range" id="netdelay" min="1" max="5" value="1"/>Net Delay
-    <br>
-    <input type="range" id="netNodes" min="3" max="8" value="1"/>Nodes
+    <p>Net Delay</p>
+    <input type="range" id="netdelay" min="1" max="5" value="1"/> 
     <br>
     <p id="netdelay_value">0</p>
+    <p>Nodes</p>
+    <input type="range" id="netNodes" min="3" max="8" value="1"/>
+    <br>
     <p id="netnode_value">0</p>     
     <p>La red</p>
     <img src="net.svg" width="400" >    
