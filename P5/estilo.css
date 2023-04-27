@@ -1,0 +1,17 @@
+body {
+    background-image: url("fondo.jpg");
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+#cloud {
+  display: none;
+}
+
+#imagesrchide {
+  display: none;
+}
